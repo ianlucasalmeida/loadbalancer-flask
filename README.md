@@ -14,9 +14,6 @@ A aplicação é composta por:
 
 ### Diagrama da Arquitetura
 
-lua
-Copiar
-Editar
                        +------------------+
                        |      Cliente     |
                        +--------+---------+
@@ -32,9 +29,7 @@ Editar
  +--------+  +--------+   +--------+   +--------+
  | App 1  |  | App 2  |   | App 3  |   | App 4  |
  +--------+  +--------+   +--------+   +--------+
-markdown
-Copiar
-Editar
+
 
 O balanceador de carga utiliza a política padrão (round robin) para redirecionar requisições entre as instâncias.
 
