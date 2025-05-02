@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  app1:
+    build: ./app
+    container_name: app1
+    environment:
+      - APP_NAME=App 1
+
+  app2:
+    build: ./app
+    container_name: app2
+    environment:
+      - APP_NAME=App 2
+
+  app3:
+    build: ./app
+    container_name: app3
+    environment:
+      - APP_NAME=App 3
+
+  app4:
+    build: ./app
+    container_name: app4
+    environment:
+      - APP_NAME=App 4
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "8080:80"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - app1
+      - app2
+      - app3
+      - app4
